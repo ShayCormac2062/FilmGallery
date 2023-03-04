@@ -1,0 +1,26 @@
+package com.example.filmgallery.domain.usecase.film
+
+import com.example.filmgallery.domain.repository.FilmsRepository
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
+import javax.inject.Named
+
+class GetFilmBySearchUseCase @Inject constructor(
+    private val repository: FilmsRepository,
+    @Named("io") private val dispatcher: CoroutineDispatcher
+) {
+
+    suspend operator fun invoke(
+        language: String,
+        query: String,
+        includeAdult: Boolean
+    ) = withContext(dispatcher) {
+        repository.getFilmsBySearch(
+            language,
+            query,
+            includeAdult
+        )
+    }
+
+}

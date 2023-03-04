@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.filmgallery.presentation.features.details.fragment.FilmDetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
+
+    <fragment
+        android:id="@+id/serialDetailsFragment"
+        android:name="com.example.filmgallery.presentation.features.details.fragment.SerialDetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_serial_details" />
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.filmgallery.presentation.features.main.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.filmgallery.presentation.features.profile.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.filmgallery.presentation.features.profile.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.filmgallery.presentation.features.profile.fragment.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.filmgallery.presentation.features.search.fragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+
+</navigation>
